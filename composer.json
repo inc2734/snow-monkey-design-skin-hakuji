@@ -12,7 +12,9 @@
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
     "phpmd/phpmd": "2.*",
-    "pdepend/pdepend": "^2.5"
+    "pdepend/pdepend": "^2.5",
+    "symfony/config": "^3",
+    "symfony/dependency-injection": "^3"
   },
   "require": {
     "php": ">=5.6",
