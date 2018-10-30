@@ -35,6 +35,8 @@ after_success:
 - pwd
 - ls -al
 before_deploy:
+- npm run build
+- ls -al
 - npm run zip
 - ls -la snow-monkey-design-skin-hakuji.zip
 - export RELEASE_FILE=$(ls snow-monkey-design-skin-hakuji.zip)
