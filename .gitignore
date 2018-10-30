@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache/
+npm-debug.log
+node_modules/
+vendor/
+.travis/github_deploy_key
+yarn-error.log
+snow-monkey-design-skin-hakuji/
+snow-monkey-design-skin-hakuji.zip

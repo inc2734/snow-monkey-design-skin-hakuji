@@ -1,0 +1,414 @@
+@import '../../node_modules/sass-basis/src/css/basis-core';
+
+@mixin hakuji-entry-content() {
+  > h2 {
+    background-color: transparent;
+    border-left: none;
+    padding: 0;
+  }
+
+  > h3 {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+@mixin hakuji-white-btn() {
+  border-radius: 0;
+  background-color: #fff !important;
+  color: _dark($_color-gray);
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: .25rem;
+  @include _transition(opacity);
+
+  @include _hover(lg) {
+    opacity: .7;
+  }
+}
+
+.c-site-branding {
+  &__description {
+    color: _light($_color-gray);
+  }
+}
+
+.p-global-nav {
+  font-family: sans-serif;
+
+  .c-navbar {
+    &__item {
+      @include _hover(lg) {
+        > a {
+          color: $_color-gray !important;
+        }
+      }
+
+      &[data-active-menu] {
+        > a {
+          color: $_color-gray !important;
+        }
+      }
+
+      > a {
+        @include _transition(color);
+
+        > small {
+          color: _light($_color-gray);
+        }
+      }
+
+      .c-navbar__submenu {
+        background-color: rgba(#fff, .9);
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__subitem {
+      @include _transition(background-color);
+      @include _hover(lg) {
+        background-color: #fff
+      }
+
+      > a {
+        color: $_color-text;
+      }
+    }
+  }
+}
+
+.wp-profile-box {
+  border: none;
+  background-color: transparent;
+
+  &__title {
+    display: none;
+  }
+
+  &__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.c-entry-aside {
+  &__title {
+    &::before,
+    &::after {
+      background-color: _lighter($_color-gray);
+    }
+  }
+}
+
+.c-widget {
+  &__title {
+    &::before,
+    &::after {
+      background-color: _lighter($_color-gray);
+    }
+  }
+}
+
+.wpaw-term {
+  background-color: transparent !important;
+  border: 1px solid $_color-text;
+  color: $_color-text;
+  padding: 4px 8px;
+}
+
+.c-entries {
+  &__item {
+    @include _media-min(lg) {
+      @include _row__col--width(50%);
+    }
+  }
+}
+
+.c-entry-summary {
+  &__term {
+    display: none !important;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__meta {
+    @include _margin-top(.5);
+  }
+}
+
+.c-entry {
+  &__header {
+    @include _margin-top(3);
+    @include _margin-bottom(2);
+    border-bottom: none;
+
+    @include _media-min(md) {
+      @include _margin-top(5);
+    }
+  }
+
+  &__meta {
+    @include _margin-top(1);
+    color: $_color-gray;
+
+    a {
+      color: $_color-gray;
+    }
+  }
+
+  &__content {
+    @include hakuji-entry-content();
+  }
+
+  &__footer {
+    @include _margin-top(3);
+  }
+}
+
+.wpco {
+  background-color: transparent;
+  border: none;
+
+  .contents-outline {
+    ol,
+    li:not(:first-child) {
+      border-top: none;
+    }
+  }
+}
+
+.c-prev-next-nav {
+  &::before {
+    display: none;
+  }
+
+  &__item {
+    > a {
+      flex: 0 0 auto;
+      display: inline-block;
+      background-color: transparent;
+      color: $_color-text;
+      @include _transition(opacity);
+      max-width: 100%;
+
+      @include _hover(lg) {
+        opacity: .7;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--prev {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item-figure {
+    display: none;
+  }
+}
+
+.p-social-nav {
+  @include _margin(1, 0);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  @include _media-min(lg) {
+    @include _margin(2, 0);
+  }
+}
+
+.l-footer-widget-area {
+  @include _margin-top(1);
+  border-top: none;
+  padding-top: none !important;
+
+  @include _media-min(lg) {
+    @include _margin-top(2);
+  }
+}
+
+.c-copyright {
+  background-color: transparent;
+  border-top: none;
+  color: $_color-text;
+}
+
+.c-page-top {
+  background-color: transparent !important;
+  border: none;
+  @include _transition(opacity);
+
+  @include _hover(lg) {
+    opacity: .7;
+  }
+
+  > a {
+    color: $_color-text;
+  }
+}
+
+.wpaw-pr-box {
+  &__lead {
+    color: $_color-gray;
+  }
+
+  &__row {
+    @include _margin-top(1);
+
+    @include _media-min(lg) {
+      @include _margin-top(2);
+    }
+  }
+}
+
+.wpaw-pickup-slider {
+  &__item-more {
+    @include hakuji-white-btn();
+    @include _transition(opacity);
+
+    @include _hover(lg) {
+      opacity: .7;
+    }
+  }
+
+  .slick-arrow {
+    background-color: transparent !important;
+  }
+
+  [data-is-content-widget-area="true"] & {
+    &__item {
+      justify-content: flex-start;
+
+      @include _media-min(lg) {
+        align-items: flex-end;
+      }
+    }
+
+    &__item-body {
+      @include _media-min(lg) {
+        padding-left: 100px;
+        top: -100px;
+      }
+    }
+
+    &__item-content {
+      align-items: flex-start;
+    }
+  }
+}
+
+.wpaw-slider {
+  &__item-more {
+    @include hakuji-white-btn();
+    @include _padding(.25, 1);
+
+    @include _media-min(md) {
+      @include _padding(.5, 2);
+    }
+
+    @include _hover(lg) {
+      opacity: .7;
+    }
+
+    &--ghost {
+      background-color: transparent !important;
+      color: $_color-black !important;
+    }
+  }
+
+  [data-is-content-widget-area="true"] & {
+    &__item {
+      justify-content: flex-start;
+
+      @include _media-min(lg) {
+        align-items: flex-end;
+      }
+    }
+
+    &__item-body {
+      @include _media-min(lg) {
+        padding-left: 100px;
+        top: -100px;
+      }
+    }
+
+    &__item-content {
+      align-items: flex-start;
+    }
+  }
+}
+
+.wpaw-showcase {
+  &__action {
+    .c-btn {
+      @include hakuji-white-btn();
+      @include _padding(.25, 1);
+
+      @include _media-min(md) {
+        @include _padding(.5, 2);
+      }
+    }
+  }
+
+  [data-is-content-widget-area="true"] & {
+    &__action {
+      .c-btn {
+        @include _media-min(md) {
+          @include _padding-top(.75);
+          @include _padding-bottom(.75);
+        }
+      }
+    }
+  }
+}
+
+.wpaw-carousel {
+  .wpaw-term {
+    display: none;
+  }
+}
+
+.wpac-section {
+  &__body {
+    @include hakuji-entry-content();
+  }
+}
+
+.wpac-columns {
+  &__col-inner {
+    @include hakuji-entry-content();
+  }
+}
+
+.smb-section,
+.wpac-section,
+.wpaw-pr-box,
+.snow-monkey-recent-posts{
+  &__title {
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.c-section {
+  [data-is-content-widget-area="true"] & {
+    &__title {
+      &::before,
+      &::after {
+        background-color: _lighter($_color-gray);
+      }
+    }
+  }
+}
