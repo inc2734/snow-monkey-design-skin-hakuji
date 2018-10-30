@@ -29,6 +29,7 @@ install:
 - npm install
 - composer install
 script:
+- npm run build
 - composer test
 after_success:
 - pwd
