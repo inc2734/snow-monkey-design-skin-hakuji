@@ -12,7 +12,7 @@
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
     "phpmd/phpmd": "2.*",
-    "pdepend/pdepend": "2.5.0"
+    "pdepend/pdepend": "^2.5"
   },
   "require": {
     "php": ">=5.6",
