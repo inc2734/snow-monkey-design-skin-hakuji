@@ -17,6 +17,7 @@
     "start": "npm run build",
     "css:skin": "node-sass src/css/design-skin.scss -o ./ && postcss ./design-skin.css -r -c=postcss.config.js",
     "css:editor": "node-sass src/css/editor-style.scss -o ./ && postcss ./editor-style.css -r -c=postcss.config.js",
+    "css:gutenberg": "node-sass src/css/gutenberg.scss -o ./ && postcss ./gutenberg.css -r -c=postcss.config.js",
     "css": "npm-run-all -p css:*",
     "build": "npm run css",
     "zip": "rimraf snow-monkey-design-skin-hakuji.zip && rsync -a --exclude '.*' --exclude '/snow-monkey-design-skin-hakuji/' --exclude '/vendor/' --exclude '/node_modules/' --exclude '*.ruleset.xml' --exclude 'package*.json' --exclude '*.config.js' ./ snow-monkey-design-skin-hakuji && cd snow-monkey-design-skin-hakuji && composer install --no-dev && cd ../ && zip -9 -qmr snow-monkey-design-skin-hakuji.zip snow-monkey-design-skin-hakuji -x 'snow-monkey-design-skin-hakuji/composer.*'"

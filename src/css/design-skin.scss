@@ -13,6 +13,21 @@
   }
 }
 
+@mixin hakuji-section-title() {
+  padding-bottom: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+@mixin hakuji-widget-title() {
+  &::before,
+  &::after {
+    background-color: _lighter($_color-gray);
+  }
+}
+
 @mixin hakuji-white-btn() {
   border-radius: 0;
   background-color: #fff !important;
@@ -103,15 +118,6 @@
   }
 }
 
-.c-widget {
-  &__title {
-    &::before,
-    &::after {
-      background-color: _lighter($_color-gray);
-    }
-  }
-}
-
 .wpaw-term {
   background-color: transparent !important;
   border: 1px solid $_color-text;
@@ -159,10 +165,6 @@
     a {
       color: $_color-gray;
     }
-  }
-
-  &__content {
-    @include hakuji-entry-content();
   }
 
   &__footer {
@@ -253,6 +255,35 @@
 
   > a {
     color: $_color-text;
+  }
+}
+
+.c-pagination {
+  &__item,
+  &__item-link,
+  &__item-ellipsis {
+    @include _font-size-line-height($_base-font-size-px + 2);
+    font-style: italic;
+  }
+
+  &__item {
+    background-color: _lighter($_color-gray) !important;
+    color: $_color-text;
+  }
+
+  &__item-link,
+  &__item-ellipsis {
+    background-color: transparent;
+    color: $_color-text;
+  }
+
+  &__item-link {
+    @include _transition(color);
+
+    @include _hover(lg) {
+      background-color: transparent;
+      color: _light($_color-text);
+    }
   }
 }
 
@@ -377,38 +408,23 @@
   }
 }
 
-.wpac-section {
-  &__body {
-    @include hakuji-entry-content();
-  }
-}
-
-.wpac-columns {
-  &__col-inner {
-    @include hakuji-entry-content();
-  }
+.c-entry__content,
+.wpac-section__body,
+.wpac-columns__col-inner,
+.textwidget {
+  @include hakuji-entry-content();
 }
 
 .smb-section,
 .wpac-section,
 .wpaw-pr-box,
-.snow-monkey-recent-posts{
+.snow-monkey-recent-posts {
   &__title {
-    padding-bottom: 0;
-
-    &::after {
-      display: none;
-    }
+    @include hakuji-section-title();
   }
 }
 
-.c-section {
-  [data-is-content-widget-area="true"] & {
-    &__title {
-      &::before,
-      &::after {
-        background-color: _lighter($_color-gray);
-      }
-    }
-  }
+.c-widget__title,
+[data-is-content-widget-area="true"] .c-section__title {
+  @include hakuji-widget-title();
 }
