@@ -2,7 +2,7 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Hakuji
  * Description: A design skin of the Snow Monkey.
- * Version: 0.1.2
+ * Version: 0.1.3
  *
  * @package snow-monkey-design-skin-hakuji
  * @author inc2734
@@ -16,12 +16,20 @@ require_once( __DIR__ . '/vendor/autoload.php' );
 add_action(
 	'plugins_loaded',
 	function() {
-		load_plugin_textdomain( 'snow-monkey-design-skin-hakuji', false, basename( __DIR__ ) . '/languages' );
+		load_plugin_textdomain(
+			'snow-monkey-design-skin-hakuji',
+			false,
+			basename( __DIR__ ) . '/languages'
+		);
 
 		add_action(
 			'init',
 			function() {
-				new GitHub_Plugin_Updater( plugin_basename( __FILE__ ), 'inc2734', 'snow-monkey-design-skin-hakuji' );
+				new GitHub_Plugin_Updater(
+					plugin_basename( __FILE__ ),
+					'inc2734',
+					'snow-monkey-design-skin-hakuji'
+				);
 			}
 		);
 
