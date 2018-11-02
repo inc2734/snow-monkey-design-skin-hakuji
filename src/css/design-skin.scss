@@ -1,3 +1,4 @@
+$_font-path: false;
 @import '../../node_modules/sass-basis/src/css/basis-core';
 
 @mixin hakuji-entry-content() {
@@ -49,8 +50,6 @@
 }
 
 .p-global-nav {
-  font-family: sans-serif;
-
   .c-navbar {
     &__item {
       @include _hover(lg) {
@@ -136,6 +135,12 @@
 .c-entry-summary {
   &__term {
     display: none !important;
+  }
+
+  &__body {
+    @include _media-min(lg) {
+      @include _padding(0, .5);
+    }
   }
 
   &__content {
@@ -262,6 +267,12 @@
 }
 
 .c-pagination {
+  @include _margin(2, 0);
+
+  @include _media-min(lg) {
+    @include _margin(3, 0);
+  }
+
   &__item,
   &__item-link,
   &__item-ellipsis {
