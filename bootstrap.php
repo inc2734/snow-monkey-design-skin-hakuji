@@ -5,6 +5,11 @@
  * @license GPL-2.0+
  */
 
+/**
+ * アーカイブページのレイアウトを1カラムに
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_archive-page-layout',
 	function( $option ) {
@@ -12,6 +17,11 @@ add_filter(
 	}
 );
 
+/**
+ * 詳細ページのレイアウトを1カラム（スリム）に
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_singular-post-layout',
 	function( $option ) {
@@ -19,6 +29,11 @@ add_filter(
 	}
 );
 
+/**
+ * container の最大幅を 1140px に
+ *
+ * @return int
+ */
 add_filter(
 	'theme_mod_container-max-width',
 	function( $option ) {
@@ -26,6 +41,11 @@ add_filter(
 	}
 );
 
+/**
+ * 基本フォントを Noto Serif JP に
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_base-font',
 	function( $option ) {
@@ -33,6 +53,11 @@ add_filter(
 	}
 );
 
+/**
+ * ヘッダーを1行レイアウトに
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_header-layout',
 	function( $option ) {
@@ -40,6 +65,11 @@ add_filter(
 	}
 );
 
+/**
+ * ヘッダー位置を sticky に
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_header-position',
 	function( $option ) {
@@ -47,6 +77,11 @@ add_filter(
 	}
 );
 
+/**
+ * ヘッダー位置設定はモバイルのみに適用
+ *
+ * @return boolean
+ */
 add_filter(
 	'theme_mod_header-position-only-mobile',
 	function( $option ) {
@@ -54,6 +89,11 @@ add_filter(
 	}
 );
 
+/**
+ * パンくずの表示位置は記事下に
+ *
+ * @return string
+ */
 add_filter(
 	'theme_mod_breadcrumbs-position',
 	function( $option ) {
@@ -61,6 +101,11 @@ add_filter(
 	}
 );
 
+/**
+ * デフォルトページヘッダー画像は設定させない
+ *
+ * @return boolean
+ */
 add_filter(
 	'theme_mod_default-page-header-image',
 	function( $option ) {
@@ -68,6 +113,11 @@ add_filter(
 	}
 );
 
+/**
+ * 投稿/固定ページのアイキャッチ画像表示はコンテンツ上に
+ *
+ * @return string
+ */
 foreach ( [ 'post-eyecatch', 'page-eyecatch' ] as $hook ) {
 	add_filter(
 		'theme_mod_' . $hook,
@@ -77,6 +127,11 @@ foreach ( [ 'post-eyecatch', 'page-eyecatch' ] as $hook ) {
 	);
 }
 
+/**
+ * お知らせバーは設定させない
+ *
+ * @return boolean
+ */
 add_filter(
 	'theme_mod_infobar-content',
 	function( $option ) {
@@ -84,6 +139,11 @@ add_filter(
 	}
 );
 
+/**
+ * シェアボタンの表示位置は記事下に
+ *
+ * @return string
+ */
 add_filter(
 	'option_mwt-share-buttons-display-position',
 	function( $option ) {
@@ -91,6 +151,11 @@ add_filter(
 	}
 );
 
+/**
+ * 関連記事は表示させない
+ *
+ * @return array
+ */
 add_filter(
 	'mimizuku_related_posts_args',
 	function( $args ) {
@@ -101,6 +166,13 @@ add_filter(
 	}
 );
 
+/**
+ * タイトル上、コンテンツ下部ウィジェットエリアは使用させない
+ *
+ * @param boolean $is_active_sidebar
+ * @param string $index
+ * @return boolean
+ */
 add_filter(
 	'is_active_sidebar',
 	function( $is_active_sidebar, $index ) {
@@ -116,6 +188,13 @@ add_filter(
 	2
 );
 
+/**
+ * ヘッダーサブナビ、フッターサブナビは使用させない
+ *
+ * @param boolean $has_nav_menu
+ * @param string $location
+ * @return boolean
+ */
 add_filter(
 	'has_nav_menu',
 	function( $has_nav_menu, $location ) {

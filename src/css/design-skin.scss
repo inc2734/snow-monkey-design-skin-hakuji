@@ -149,12 +149,15 @@
 
 .c-entry {
   &__header {
-    @include _margin-top(3);
-    @include _margin-bottom(2);
     border-bottom: none;
+    @include _margin-bottom(2);
 
-    @include _media-min(md) {
-      @include _margin-top(5);
+    [data-has-sidebar="false"] & {
+      @include _margin-top(3);
+
+      @include _media-min(md) {
+        @include _margin-top(5);
+      }
     }
   }
 
@@ -408,9 +411,7 @@
   }
 }
 
-.c-entry__content,
-.wpac-section__body,
-.wpac-columns__col-inner,
+.p-entry-content,
 .textwidget {
   @include hakuji-entry-content();
 }
