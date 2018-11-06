@@ -211,7 +211,7 @@ $_font-path: false;
           @include _media-min(md) {
             flex-direction: row-reverse;
 
-            &__figure {
+            &__body {
               margin-left: 0;
               margin-right: auto;
             }
