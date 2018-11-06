@@ -49,3 +49,4 @@ deploy:
   on:
     tags: true
     repo: inc2734/snow-monkey-design-skin-hakuji
+    php: 7.1
