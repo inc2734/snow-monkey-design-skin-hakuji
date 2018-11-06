@@ -209,3 +209,14 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * 一覧の記事タイトルをトリムしない
+ *
+ * @param int
+ * @return int|false
+ */
+add_filter(
+	'snow_monkey_entry_summary_title_num_words',
+	'__return_false'
+);

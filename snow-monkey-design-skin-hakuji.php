@@ -2,7 +2,7 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Hakuji
  * Description: A design skin of the Snow Monkey.
- * Version: 0.1.5
+ * Version: 0.2.0
  *
  * @package snow-monkey-design-skin-hakuji
  * @author inc2734
