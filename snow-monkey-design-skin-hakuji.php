@@ -9,7 +9,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap;
+use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 
 require_once( __DIR__ . '/vendor/autoload.php' );
 
@@ -25,7 +25,7 @@ add_action(
 		add_action(
 			'init',
 			function() {
-				new Bootstrap(
+				new Updater(
 					plugin_basename( __FILE__ ),
 					'inc2734',
 					'snow-monkey-design-skin-hakuji'
