@@ -2,7 +2,7 @@
 /**
  * Plugin name: [ Snow Monkey Design Skin ] Hakuji
  * Description: A design skin of the Snow Monkey.
- * Version: 0.3.0
+ * Version: 0.3.1
  * Tested up to: 5.5
  * Requires at least: 5.5
  * Requires PHP: 5.6
