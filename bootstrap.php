@@ -12,7 +12,7 @@
  */
 add_filter(
 	'theme_mod_archive-page-layout',
-	function( $option ) {
+	function() {
 		return 'one-column';
 	}
 );
@@ -24,7 +24,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_singular-post-layout',
-	function( $option ) {
+	function() {
 		return 'one-column-slim';
 	}
 );
@@ -36,7 +36,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_container-max-width',
-	function( $option ) {
+	function() {
 		return 1140;
 	}
 );
@@ -48,7 +48,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_base-font',
-	function( $option ) {
+	function() {
 		return 'noto-serif-jp';
 	}
 );
@@ -60,7 +60,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_header-layout',
-	function( $option ) {
+	function() {
 		return '1row';
 	}
 );
@@ -72,7 +72,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_header-position',
-	function( $option ) {
+	function() {
 		return 'sticky';
 	}
 );
@@ -84,7 +84,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_header-position-only-mobile',
-	function( $option ) {
+	function() {
 		return true;
 	}
 );
@@ -96,7 +96,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_breadcrumbs-position',
-	function( $option ) {
+	function() {
 		return 'bottom-content-width';
 	}
 );
@@ -108,7 +108,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_default-page-header-image',
-	function( $option ) {
+	function() {
 		return false;
 	}
 );
@@ -121,7 +121,7 @@ add_filter(
 foreach ( [ 'post-eyecatch', 'page-eyecatch' ] as $hook ) {
 	add_filter(
 		'theme_mod_' . $hook,
-		function( $option ) {
+		function() {
 			return 'content-top';
 		}
 	);
@@ -134,7 +134,7 @@ foreach ( [ 'post-eyecatch', 'page-eyecatch' ] as $hook ) {
  */
 add_filter(
 	'theme_mod_infobar-content',
-	function( $option ) {
+	function() {
 		return false;
 	}
 );
@@ -146,7 +146,7 @@ add_filter(
  */
 add_filter(
 	'option_mwt-share-buttons-display-position',
-	function( $option ) {
+	function() {
 		return 'bottom';
 	}
 );
@@ -158,7 +158,7 @@ add_filter(
  */
 add_filter(
 	'mimizuku_related_posts_args',
-	function( $args ) {
+	function() {
 		return [
 			'post_type'      => 'NO_EXIST_POST_TYPE',
 			'posts_per_page' => 1,

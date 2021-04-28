@@ -10,3 +10,5 @@ snow-monkey-design-skin-hakuji.zip
 design-skin.css
 editor-style.css
 gutenberg.css
+.wp-env.override.json
+/.export/*

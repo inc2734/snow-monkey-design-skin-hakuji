@@ -49,6 +49,7 @@ add_action(
 					],
 					'plugin'
 				);
+
 				$choices[ basename( __FILE__, '.php' ) ] = $plugin_data['label'];
 				return $choices;
 			}
