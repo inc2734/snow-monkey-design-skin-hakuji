@@ -11,7 +11,7 @@
  * @return string
  */
 add_filter(
-	'theme_mod_archive-page-layout',
+	'theme_mod_archive-post-layout',
 	function() {
 		return 'one-column';
 	}
@@ -23,7 +23,7 @@ add_filter(
  * @return string
  */
 add_filter(
-	'theme_mod_singular-post-layout',
+	'theme_mod_post-layout',
 	function() {
 		return 'one-column-slim';
 	}
@@ -74,18 +74,6 @@ add_filter(
 	'theme_mod_header-position',
 	function() {
 		return 'sticky';
-	}
-);
-
-/**
- * ヘッダー位置設定はモバイルのみに適用
- *
- * @return boolean
- */
-add_filter(
-	'theme_mod_header-position-only-mobile',
-	function() {
-		return true;
 	}
 );
 

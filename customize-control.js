@@ -2,11 +2,11 @@
   var api = wp.customize;
 
   api.bind('ready', function() {
-    api.control('archive-page-layout').container.remove();
-    api.control.remove('archive-page-layout');
+    api.control('archive-post-layout').container.remove();
+    api.control.remove('archive-post-layout');
 
-    api.control('singular-post-layout').container.remove();
-    api.control.remove('singular-post-layout');
+    api.control('post-layout').container.remove();
+    api.control.remove('post-layout');
 
     api.control('container-max-width').container.remove();
     api.control.remove('container-max-width');
@@ -19,9 +19,6 @@
 
     api.control('header-position').container.remove();
     api.control.remove('header-position');
-
-    api.control('header-position-only-mobile').container.remove();
-    api.control.remove('header-position-only-mobile');
 
     api.control('breadcrumbs-position').container.remove();
     api.control.remove('breadcrumbs-position');
