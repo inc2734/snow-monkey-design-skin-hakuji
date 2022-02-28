@@ -40,7 +40,7 @@ $_half-leading: .4 !default;
   letter-spacing: .25rem;
   @include _transition(opacity);
 
-  @include _hover(lg) {
+  @include _hover() {
     opacity: .7;
   }
 }
@@ -54,7 +54,7 @@ $_half-leading: .4 !default;
 .p-global-nav {
   .c-navbar {
     &__item {
-      @include _hover(lg) {
+      @include _hover() {
         > a {
           color: $_color-gray !important;
         }
@@ -85,7 +85,7 @@ $_half-leading: .4 !default;
 
     &__subitem {
       @include _transition(background-color);
-      @include _hover(lg) {
+      @include _hover() {
         background-color: #fff
       }
 
@@ -278,7 +278,7 @@ $_half-leading: .4 !default;
       @include _transition(opacity);
       max-width: 100%;
 
-      @include _hover(lg) {
+      @include _hover() {
         opacity: .7;
       }
 
@@ -329,7 +329,7 @@ $_half-leading: .4 !default;
   border: none;
   @include _transition(opacity);
 
-  @include _hover(lg) {
+  @include _hover() {
     opacity: .7;
   }
 
@@ -366,7 +366,7 @@ $_half-leading: .4 !default;
   &__item-link {
     @include _transition(color);
 
-    @include _hover(lg) {
+    @include _hover() {
       background-color: transparent;
       color: _light($_color-text);
     }
@@ -392,7 +392,7 @@ $_half-leading: .4 !default;
     @include hakuji-white-btn();
     @include _transition(opacity);
 
-    @include _hover(lg) {
+    @include _hover() {
       opacity: .7;
     }
   }
@@ -432,7 +432,7 @@ $_half-leading: .4 !default;
       @include _padding(.5, 2);
     }
 
-    @include _hover(lg) {
+    @include _hover() {
       opacity: .7;
     }
 
