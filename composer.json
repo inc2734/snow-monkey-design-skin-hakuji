@@ -1,36 +1,34 @@
 {
-  "type": "wordpress-plugin",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Takashi Kitajima",
-      "email": "inc@2inc.org",
-      "homepage": "https://2inc.org"
-    }
-  ],
-  "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "squizlabs/php_codesniffer": "^3.6",
-    "phpcompatibility/php-compatibility": "^9.3",
-    "wp-coding-standards/wpcs": "^2.3",
-    "sirbrillig/phpcs-variable-analysis": "^2.11"
-  },
-  "require": {
-    "php": ">=5.6",
-    "inc2734/wp-github-plugin-updater": ">=3.1"
-  },
-  "scripts" :{
-    "format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
-    "lint": "phpcs --standard=./.phpcs.xml.dist"
-  },
-  "autoload": {
-    "psr-4": {
-      "Snow_Monkey\\Plugin\\DesignSkinHakuji\\": ""
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  }
+	"name": "inc2734/snow-monkey-design-skin-hakuji",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Takashi Kitajima",
+			"email": "inc@2inc.org",
+			"homepage": "https://2inc.org"
+		}
+	],
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+	},
+	"require": {
+		"php": ">=7.4",
+		"inc2734/wp-github-plugin-updater": ">=3.1"
+	},
+	"scripts" :{
+		"format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
+		"lint": "phpcs --standard=./.phpcs.xml.dist"
+	},
+	"autoload": {
+		"psr-4": {
+			"Snow_Monkey\\Plugin\\DesignSkinHakuji\\": ""
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
 }

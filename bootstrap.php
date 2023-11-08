@@ -106,7 +106,7 @@ add_filter(
  *
  * @return string
  */
-foreach ( [ 'post-eyecatch', 'page-eyecatch' ] as $hook ) {
+foreach ( array( 'post-eyecatch', 'page-eyecatch' ) as $hook ) {
 	add_filter(
 		'theme_mod_' . $hook,
 		function() {
@@ -147,10 +147,10 @@ add_filter(
 add_filter(
 	'mimizuku_related_posts_args',
 	function() {
-		return [
+		return array(
 			'post_type'      => 'NO_EXIST_POST_TYPE',
 			'posts_per_page' => 1,
-		];
+		);
 	}
 );
 
