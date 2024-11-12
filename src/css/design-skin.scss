@@ -1,4 +1,4 @@
-@import '../../node_modules/sass-basis/src/css/basis-core';
+@use '../../node_modules/sass-basis/src/css/core';
 
 @mixin hakuji-entry-content() {
 	> h2 {
@@ -35,9 +35,9 @@
 	font-weight: bold;
 	font-family: sans-serif;
 	letter-spacing: .25rem;
-	@include _transition(opacity);
+	@include core.transition(opacity);
 
-	@include _hover() {
+	@include core.hover() {
 		opacity: .7;
 	}
 }
@@ -51,7 +51,7 @@
 .p-global-nav {
 	.c-navbar {
 		&__item {
-			@include _hover() {
+			@include core.hover() {
 				> a {
 					color: var(--_color-gray) !important;
 				}
@@ -64,7 +64,7 @@
 			}
 
 			> a {
-				@include _transition(color);
+				@include core.transition(color);
 
 				> small {
 					color: var(--_light-color-gray);
@@ -81,8 +81,8 @@
 		}
 
 		&__subitem {
-			@include _transition(background-color);
-			@include _hover() {
+			@include core.transition(background-color);
+			@include core.hover() {
 				background-color: #fff
 			}
 
@@ -149,7 +149,7 @@
 			&:not(:first-child) {
 				margin-top: var(--_margin2);
 
-				@include _media-min(md) {
+				@include core.media-min(md) {
 					margin-top: var(--_margin4);
 				}
 			}
@@ -157,8 +157,8 @@
 			.c-entry-summary {
 				position: relative;
 
-				@include _media-min(md) {
-					@include _row();
+				@include core.media-min(md) {
+					@include core.row();
 
 					&__figure,
 					&__body {
@@ -210,7 +210,7 @@
 				}
 
 				.c-entry-summary {
-					@include _media-min(md) {
+					@include core.media-min(md) {
 						flex-direction: row-reverse;
 
 						&__body {
@@ -231,7 +231,7 @@
 		[data-has-sidebar="false"] & {
 			margin-top: var(--_margin3);
 
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin-top: var(--_margin4);
 			}
 		}
@@ -274,10 +274,10 @@
 			display: inline-block;
 			background-color: transparent;
 			color: inherit;
-			@include _transition(opacity);
+			@include core.transition(opacity);
 			max-width: 100%;
 
-			@include _hover() {
+			@include core.hover() {
 				opacity: .7;
 			}
 
@@ -302,7 +302,7 @@
 	border: none;
 	padding: 0;
 
-	@include _media-min(lg) {
+	@include core.media-min(lg) {
 		margin: var(--_margin2) 0;
 	}
 }
@@ -312,7 +312,7 @@
 	border-top: none;
 	padding-top: none !important;
 
-	@include _media-min(lg) {
+	@include core.media-min(lg) {
 		margin-top: var(--_margin2);
 	}
 }
@@ -326,9 +326,9 @@
 .c-page-top {
 	background-color: transparent !important;
 	border: none;
-	@include _transition(opacity);
+	@include core.transition(opacity);
 
-	@include _hover() {
+	@include core.hover() {
 		opacity: .7;
 	}
 
@@ -340,14 +340,14 @@
 .c-pagination {
 	margin: var(--_margin2) 0;
 
-	@include _media-min(lg) {
+	@include core.media-min(lg) {
 		margin: var(--_margin3) 0;
 	}
 
 	&__item,
 	&__item-link,
 	&__item-ellipsis {
-		@include _set-font-size-level(1);
+		@include core.set-font-size-level(1);
 		font-style: italic;
 	}
 
@@ -363,9 +363,9 @@
 	}
 
 	&__item-link {
-		@include _transition(color);
+		@include core.transition(color);
 
-		@include _hover() {
+		@include core.hover() {
 			background-color: transparent;
 			color: var(--_light-color-text);
 		}
@@ -380,7 +380,7 @@
 	&__row {
 		margin-top: var(--_margin1);
 
-		@include _media-min(lg) {
+		@include core.media-min(lg) {
 			margin-top: var(--_margin2);
 		}
 	}
@@ -389,9 +389,8 @@
 .wpaw-pickup-slider {
 	&__item-more {
 		@include hakuji-white-btn();
-		@include _transition(opacity);
 
-		@include _hover() {
+		@include core.hover() {
 			opacity: .7;
 		}
 	}
@@ -404,13 +403,13 @@
 		&__item {
 			justify-content: flex-start;
 
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				align-items: flex-end;
 			}
 		}
 
 		&__item-body {
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				padding-left: 100px;
 				top: -100px;
 			}
@@ -424,14 +423,14 @@
 
 .wpaw-slider {
 	&__item-more {
-		@include hakuji-white-btn();
 		padding: var(--_padding-2) var(--_padding1);
+		@include hakuji-white-btn();
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			padding: var(--_padding-1) var(--_padding2);
 		}
 
-		@include _hover() {
+		@include core.hover() {
 			opacity: .7;
 		}
 
@@ -445,13 +444,13 @@
 		&__item {
 			justify-content: flex-start;
 
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				align-items: flex-end;
 			}
 		}
 
 		&__item-body {
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				padding-left: 100px;
 				top: -100px;
 			}
@@ -466,10 +465,10 @@
 .wpaw-showcase {
 	&__action {
 		.c-btn {
-			@include hakuji-white-btn();
 			padding: var(--_padding-2) var(--_padding1);
+			@include hakuji-white-btn();
 
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				padding: var(--_padding-1) var(--_padding2);
 			}
 		}
@@ -478,7 +477,7 @@
 	[data-is-content-widget-area="true"] & {
 		&__action {
 			.c-btn {
-				@include _media-min(md) {
+				@include core.media-min(md) {
 					padding-top: var(--_padding-1);
 					padding-bottom: var(--_padding-1);
 				}

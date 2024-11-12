@@ -14,20 +14,25 @@
 
 use Inc2734\WP_GitHub_Plugin_Updater\Bootstrap as Updater;
 
-require_once( __DIR__ . '/vendor/autoload.php' );
+require_once __DIR__ . '/vendor/autoload.php';
 
 add_action(
 	'plugins_loaded',
-	function() {
-		load_plugin_textdomain(
-			'snow-monkey-design-skin-hakuji',
-			false,
-			basename( __DIR__ ) . '/languages'
+	function () {
+		add_action(
+			'init',
+			function () {
+				load_plugin_textdomain(
+					'snow-monkey-design-skin-hakuji',
+					false,
+					basename( __DIR__ ) . '/languages'
+				);
+			}
 		);
 
 		add_action(
 			'init',
-			function() {
+			function () {
 				new Updater(
 					plugin_basename( __FILE__ ),
 					'inc2734',
@@ -41,7 +46,7 @@ add_action(
 
 		add_filter(
 			'snow_monkey_design_skin_choices',
-			function( $choices ) {
+			function ( $choices ) {
 				$plugin_data = get_file_data(
 					__FILE__,
 					array(
@@ -59,7 +64,7 @@ add_action(
 
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( class_exists( '\Snow_Monkey\app\model\Design_Skin' ) ) {
 			new \Snow_Monkey\app\model\Design_Skin( __FILE__ );
 		}

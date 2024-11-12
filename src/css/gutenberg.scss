@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 .edit-post-visual-editor .editor-writing-flow {
-  @import 'design-skin';
+ @include meta.load-css('./design-skin');
 }

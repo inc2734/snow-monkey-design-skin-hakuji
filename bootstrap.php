@@ -12,7 +12,7 @@
  */
 add_filter(
 	'theme_mod_archive-post-layout',
-	function() {
+	function () {
 		return 'one-column';
 	}
 );
@@ -24,7 +24,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_post-layout',
-	function() {
+	function () {
 		return 'one-column-slim';
 	}
 );
@@ -36,7 +36,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_container-max-width',
-	function() {
+	function () {
 		return 1140;
 	}
 );
@@ -48,7 +48,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_base-font',
-	function() {
+	function () {
 		return 'noto-serif-jp';
 	}
 );
@@ -60,7 +60,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_header-layout',
-	function() {
+	function () {
 		return '1row';
 	}
 );
@@ -72,7 +72,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_header-position',
-	function() {
+	function () {
 		return 'sticky';
 	}
 );
@@ -84,7 +84,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_breadcrumbs-position',
-	function() {
+	function () {
 		return 'bottom-content-width';
 	}
 );
@@ -96,7 +96,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_default-page-header-image',
-	function() {
+	function () {
 		return false;
 	}
 );
@@ -109,7 +109,7 @@ add_filter(
 foreach ( array( 'post-eyecatch', 'page-eyecatch' ) as $hook ) {
 	add_filter(
 		'theme_mod_' . $hook,
-		function() {
+		function () {
 			return 'content-top';
 		}
 	);
@@ -122,7 +122,7 @@ foreach ( array( 'post-eyecatch', 'page-eyecatch' ) as $hook ) {
  */
 add_filter(
 	'theme_mod_infobar-content',
-	function() {
+	function () {
 		return false;
 	}
 );
@@ -134,7 +134,7 @@ add_filter(
  */
 add_filter(
 	'option_mwt-share-buttons-display-position',
-	function() {
+	function () {
 		return 'bottom';
 	}
 );
@@ -146,7 +146,7 @@ add_filter(
  */
 add_filter(
 	'mimizuku_related_posts_args',
-	function() {
+	function () {
 		return array(
 			'post_type'      => 'NO_EXIST_POST_TYPE',
 			'posts_per_page' => 1,
@@ -163,7 +163,7 @@ add_filter(
  */
 add_filter(
 	'is_active_sidebar',
-	function( $is_active_sidebar, $index ) {
+	function ( $is_active_sidebar, $index ) {
 		if ( 'title-top-widget-area' === $index ) {
 			return false;
 		}
@@ -185,7 +185,7 @@ add_filter(
  */
 add_filter(
 	'has_nav_menu',
-	function( $has_nav_menu, $location ) {
+	function ( $has_nav_menu, $location ) {
 		if ( 'header-sub-nav' === $location ) {
 			return false;
 		}
